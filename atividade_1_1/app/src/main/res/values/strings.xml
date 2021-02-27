@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Atividade 1.1</string>
+    <string name="button_text">Sum</string>
+    <string name="n1_field_text">Type the first number</string>
+    <string name="n2_field_text">Type the second number</string>
+    <string name="result_field_text">The result will appear here...</string>
+</resources>
