@@ -1,13 +1,19 @@
 package example.com;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
+import android.Manifest;
 import android.annotation.SuppressLint;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
-import android.os.Bundle;;
+import android.location.Location;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;;
 
 import com.google.android.material.textfield.TextInputEditText;
 
@@ -41,15 +47,33 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         up = findViewById(R.id.text_field_z);
 
 
+        ActivityCompat.requestPermissions(MainActivity.this, new
+                String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 123);
+
+        getGPSBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                GPSTracker g = new GPSTracker(getApplicationContext());
+                Location l = g.getLocation();
+                if (l != null) {
+                    double lat = ((Location) l).getLatitude();
+                    double longi = l.getLongitude();
+                    Toast.makeText(getApplicationContext(), "LAT: " + lat + "LONG: " +
+                            longi, Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
+
     }
 
 
     @Override
     protected void onResume() {
         super.onResume();
-        if(mLuminosity != null)
+        if (mLuminosity != null)
             mSensorManager.registerListener(this, mLuminosity, SensorManager.SENSOR_DELAY_NORMAL);
-        if(mMagneticField != null)
+        if (mMagneticField != null)
             mSensorManager.registerListener(this, mMagneticField, SensorManager.SENSOR_DELAY_NORMAL);
     }
 
@@ -71,7 +95,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
             north.setText(String.format("%.5g%n", sensorX));
             east.setText(String.format("%.5g%n", sensorY));
             up.setText(String.format("%.5g%n", sensorZ));
-        } else if(event.sensor.getType() == Sensor.TYPE_LIGHT){
+        } else if (event.sensor.getType() == Sensor.TYPE_LIGHT) {
             float sensorOutput = event.values[0];
             luminosity.setText(String.valueOf(sensorOutput));
         }
