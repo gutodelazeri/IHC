@@ -112,43 +112,64 @@
 
     <EditText
         android:id="@+id/gps_label"
-        android:layout_width="230dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="12dp"
+        android:layout_width="193dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="GPS Coordinates"
+        android:text="@string/gps_coordinates"
+        android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.674"
+        app:layout_constraintHorizontal_bias="0.559"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/gps_field"
+        android:id="@+id/textInputLayout5"
         android:layout_width="253dp"
-        android:layout_height="48dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="64dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gps_label"
-        app:layout_constraintVertical_bias="0.033">
+        app:layout_constraintTop_toBottomOf="@+id/gps_label">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/gps_field_lat"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="hint" />
+            android:enabled="false"
+            android:hint="@string/lat_hint" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/update_button"
-        android:layout_width="107dp"
-        android:layout_height="47dp"
-        android:text="Update"
+        android:layout_width="132dp"
+        android:layout_height="127dp"
+        android:onClick="onClick_updateButton"
+        android:text="@string/update"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.549"
-        app:layout_constraintStart_toEndOf="@+id/gps_field"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/textInputLayout5"
         app:layout_constraintTop_toBottomOf="@+id/gps_label"
-        app:layout_constraintVertical_bias="0.03" />
+        app:layout_constraintVertical_bias="0.031" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="253dp"
+        android:layout_height="64dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout5"
+        app:layout_constraintVertical_bias="0.0">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/gps_field_lon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:enabled="false"
+            android:hint="@string/longitude" />
+    </com.google.android.material.textfield.TextInputLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

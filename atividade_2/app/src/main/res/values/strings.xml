@@ -4,6 +4,10 @@
     <string name="z">Up</string>
     <string name="y">East</string>
     <string name="x">North</string>
-    <string name="waiting_for_a_change">Waiting for a change...</string>
+    <string name="waiting_for_a_change">Waiting for a change…</string>
     <string name="luminosity">Luminosity</string>
+    <string name="update">Update</string>
+    <string name="lat_hint">Latitude</string>
+    <string name="gps_coordinates">GPS Coordinates</string>
+    <string name="longitude">Longitude</string>
 </resources>

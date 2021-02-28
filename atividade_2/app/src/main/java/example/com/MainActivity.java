@@ -12,8 +12,7 @@ import android.hardware.SensorManager;
 import android.location.Location;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.Toast;;
+;
 
 import com.google.android.material.textfield.TextInputEditText;
 
@@ -29,6 +28,10 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     TextInputEditText north;
     TextInputEditText east;
     TextInputEditText up;
+
+    TextInputEditText gps_lat;
+    TextInputEditText gps_lon;
+
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -46,24 +49,11 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         east = findViewById(R.id.text_field_y);
         up = findViewById(R.id.text_field_z);
 
+        gps_lat = findViewById(R.id.gps_field_lat);
+        gps_lon = findViewById(R.id.gps_field_lon);
 
         ActivityCompat.requestPermissions(MainActivity.this, new
-                String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 123);
-
-        getGPSBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                GPSTracker g = new GPSTracker(getApplicationContext());
-                Location l = g.getLocation();
-                if (l != null) {
-                    double lat = ((Location) l).getLatitude();
-                    double longi = l.getLongitude();
-                    Toast.makeText(getApplicationContext(), "LAT: " + lat + "LONG: " +
-                            longi, Toast.LENGTH_LONG).show();
-                }
-            }
-        });
-
+               String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 123);
 
     }
 
@@ -104,5 +94,21 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
 
     @Override
     public void onAccuracyChanged(Sensor sensor, int accuracy) {
+    }
+
+
+    public void onClick_updateButton(View view) {
+
+        GPSTracker g = new GPSTracker(getApplicationContext());
+        Location l = g.getLocation();
+        if (l != null) {
+            double lat = ((Location) l).getLatitude();
+            double lon = l.getLongitude();
+
+            gps_lat.setText(String.valueOf(lat));
+            gps_lon.setText(String.valueOf(lon));
+
+        }
+
     }
 }
