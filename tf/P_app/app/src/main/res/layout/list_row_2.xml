@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:padding="16dp"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/txtWeek"
+        android:layout_width="170dp"
+        android:layout_height="30dp"
+        android:singleLine="true"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:text="2021 - Semana 37" />
+
+    <TextView
+        android:id="@+id/txtDays"
+        android:layout_below="@+id/txtWeek"
+        android:layout_width="130dp"
+        android:layout_height="30dp"
+        style="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+        android:text="DD/MM - DD/MM" />
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="26dp"
+        android:layout_marginTop="0dp"
+        android:layout_toRightOf="@+id/txtWeek"
+        android:src="@mipmap/ic_launcher"
+        android:layout_marginStart="26dp"
+        android:layout_toEndOf="@+id/txtWeek" />
+
+    <TextView
+        android:id="@+id/txtStatus"
+        style="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/icon"
+        android:text="Justificado"
+        android:layout_toEndOf="@+id/icon"
+        android:layout_marginStart="24dp" />
+
+
+</RelativeLayout>
