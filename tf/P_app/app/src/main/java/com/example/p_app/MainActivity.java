@@ -15,11 +15,14 @@ public class MainActivity extends AppCompatActivity {
 
     ListView listView;
     String[] names = {"Renan Martins", "Gustavo Delazeri", "Neymar"};
+    String[] pending = {"0", "0", "1"};
+    String[] week = {"3", "2", "1"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        this.setTitle("Anderson Maciel");
 
         listView = findViewById(R.id.listView);
 
@@ -41,6 +44,8 @@ public class MainActivity extends AppCompatActivity {
 
                 Intent myIntent = new Intent(MainActivity.this, ViewStudent.class);
                 myIntent.putExtra("message", names[(int) itemId]);
+                myIntent.putExtra("pending", pending[(int) itemId]);
+                myIntent.putExtra("week", week[(int) itemId]);
                 MainActivity.this.startActivity(myIntent);
             }
         });
