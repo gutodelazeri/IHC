@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -13,6 +14,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     ListView listView;
+    String[] names = {"Renan Martins", "Gustavo Delazeri", "Neymar"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,13 +38,9 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> listView, View itemView, int itemPosition, long itemId)  {
                 System.out.println(itemId);
 
-                //TextInputEditText textEdit = findViewById(R.id.text_field);
-
-                //if (textEdit.getText() == null)
-                 //   return;
 
                 Intent myIntent = new Intent(MainActivity.this, ViewStudent.class);
-                myIntent.putExtra("message", "hello");
+                myIntent.putExtra("message", names[(int) itemId]);
                 MainActivity.this.startActivity(myIntent);
             }
         });
