@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
+import android.view.View;
 import android.widget.CheckBox;
 import android.widget.TextView;
 
@@ -42,6 +44,10 @@ public class j_activity extends AppCompatActivity {
         this.findViewById(R.id.checkBox7).setEnabled(false);
 
 
+        TextView textview= (TextView) findViewById(R.id.textView4);
+        textview.setMovementMethod(new ScrollingMovementMethod());
+
+
         TextView t =  this.findViewById(R.id.textView);
         t.setText(intent.getStringExtra("week"));
 
@@ -50,6 +56,8 @@ public class j_activity extends AppCompatActivity {
 
         if(intent.getStringExtra("status").equals("1")) {
             String tmp;
+
+            this.findViewById(R.id.empty_file).setVisibility(View.INVISIBLE);
 
             t = this.findViewById(R.id.textView16);
             tmp = "E-mail do aluno: ousadiaealegria@inf.ufrgs.br";

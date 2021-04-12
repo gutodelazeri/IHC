@@ -108,7 +108,8 @@
         android:id="@+id/textView4"
         android:layout_width="323dp"
         android:layout_height="235dp"
-        android:text="blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla"
+        android:scrollbars = "vertical"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac massa tempor, vestibulum enim vitae, varius nisl. Curabitur congue diam erat, nec mattis urna egestas vel. Donec bibendum elementum ante quis placerat. Phasellus ac dolor suscipit, malesuada neque non, convallis purus. Nunc mollis non leo id tempus. Mauris at neque eget nulla ullamcorper tempus. Nullam ut mi malesuada velit viverra pharetra et a mi. Morbi semper maximus eros, et sodales augue elementum vitae. Vivamus vitae magna eu arcu interdum condimentum sed sit amet urna. Cras justo lorem, elementum vitae sodales non, finibus non velit. Nulla ut lorem ultricies, elementum purus porttitor, faucibus erat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus vitae enim a sapien mattis semper non sed mi. Phasellus id molestie nisl, vitae consectetur neque.  Cras mollis tincidunt varius. Nam congue, elit at aliquam venenatis, elit massa imperdiet lorem, non dapibus neque lacus vitae augue. Sed eleifend vitae felis non efficitur. Quisque aliquam ligula ac mi mattis bibendum. In porttitor diam non augue consectetur dictum. Aliquam lectus nulla, interdum a ante non, auctor maximus ante. Donec ultrices euismod turpis et faucibus. Donec porta, ligula id tristique gravida, ante leo bibendum tortor, eu porta arcu nunc nec diam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec elementum tincidunt venenatis. Donec at faucibus magna. Aliquam erat volutpat. Sed varius sapien justo, accumsan dictum lectus condimentum sed."
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -146,20 +147,22 @@
         android:id="@+id/textView14"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
         android:text="Hora: hh/mm"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.069"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.515" />
+        app:layout_constraintVertical_bias="0.518" />
 
     <TextView
         android:id="@+id/textView15"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
         android:text="Data: dd/mm/aaaa"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -172,7 +175,8 @@
         android:id="@+id/textView16"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
         android:text="E-mail: ousadiaealegria@inf.ufrgs.br"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -185,7 +189,8 @@
         android:id="@+id/textView17"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
         android:text="Cartão: 00000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -193,6 +198,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.616" />
+
+    <ImageView
+        android:id="@+id/empty_file"
+        android:layout_width="298dp"
+        android:layout_height="168dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView16"
+        app:layout_constraintVertical_bias="0.512"
+        app:srcCompat="@drawable/empty_file" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
