@@ -61,6 +61,8 @@ public class ViewStudent extends AppCompatActivity {
         if(intent.getStringExtra("pending").equals("1")) {
             ArrayList<Justificativa> arrayList = new ArrayList<>();
 
+            this.findViewById(R.id.empty_box).setVisibility(View.INVISIBLE);
+
             arrayList.add(new Justificativa("2021 - Semana 37", "13/09 - 19/09", "Não Justificado", R.drawable.icon0));
             arrayList.add(new Justificativa("2021 - Semana 12", "22/03 - 28/03", "Justificado", R.drawable.icon1));
             arrayList.add(new Justificativa("2021 - Semana 08", "22/02 - 28/02", "Justificado", R.drawable.icon1));
