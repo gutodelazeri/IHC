@@ -67,20 +67,7 @@ public class LoginActivity extends AppCompatActivity {
         loginViewModel.getLoginResult().observe(this, new Observer<LoginResult>() {
             @Override
             public void onChanged(@Nullable LoginResult loginResult) {
-                if (loginResult == null) {
-                    return;
-                }
-                //loadingProgressBar.setVisibility(View.GONE);
-                if (loginResult.getError() != null) {
-                    showLoginFailed(loginResult.getError());
-                }
-                if (loginResult.getSuccess() != null) {
-                    updateUiWithUser(loginResult.getSuccess());
-                }
-                setResult(Activity.RESULT_OK);
 
-                //Complete and destroy login activity once successful
-                finish();
             }
         });
 
@@ -122,21 +109,18 @@ public class LoginActivity extends AppCompatActivity {
                 loginViewModel.login(usernameEditText.getText().toString(),
                         passwordEditText.getText().toString());
 
-                Intent myIntent = new Intent(LoginActivity.this, MainActivity.class);
-                myIntent.putExtra("message", "hello");
-                LoginActivity.this.startActivity(myIntent);
+               if(usernameEditText.getText().toString().equals("teste@inf.ufrgs.br") && passwordEditText.getText().toString().equals("123456")){
+                   Toast.makeText(getApplicationContext(), R.string.welcome, Toast.LENGTH_LONG).show();
+                   Intent myIntent = new Intent(LoginActivity.this, MainActivity.class);
+                   myIntent.putExtra("message", "hello");
+                   LoginActivity.this.startActivity(myIntent);
+                   finish();
+
+               }else{
+                   Toast.makeText(getApplicationContext(), R.string.login_failed, Toast.LENGTH_SHORT).show();
+               }
+                setResult(Activity.RESULT_OK);
             }
         });
     }
-
-    private void updateUiWithUser(LoggedInUserView model) {
-        String welcome = getString(R.string.welcome) + model.getDisplayName();
-        // TODO : initiate successful logged in experience
-        Toast.makeText(getApplicationContext(), welcome, Toast.LENGTH_LONG).show();
-    }
-
-    private void showLoginFailed(@StringRes Integer errorString) {
-        Toast.makeText(getApplicationContext(), errorString, Toast.LENGTH_SHORT).show();
-    }
-
 }

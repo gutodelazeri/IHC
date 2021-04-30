@@ -20,48 +20,23 @@
         app:layout_constraintVertical_bias="0.052" />
 
     <CheckBox
-        android:id="@+id/checkBox"
+        android:id="@+id/checkBox5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:text="Seg"
+        android:text="Qui"
         app:layout_constraintBottom_toTopOf="@+id/textView9"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.204"
+        app:layout_constraintHorizontal_bias="0.293"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8"
-        app:layout_constraintVertical_bias="0.275" />
-
-    <CheckBox
-        android:id="@+id/checkBox2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginLeft="28dp"
-        android:text="Ter"
-        app:layout_constraintBottom_toBottomOf="@+id/checkBox"
-        app:layout_constraintStart_toEndOf="@+id/checkBox"
-        app:layout_constraintTop_toTopOf="@+id/checkBox"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <CheckBox
-        android:id="@+id/checkBox3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginLeft="36dp"
-        android:text="Qua"
-        app:layout_constraintBottom_toBottomOf="@+id/checkBox2"
-        app:layout_constraintStart_toEndOf="@+id/checkBox2"
-        app:layout_constraintTop_toTopOf="@+id/checkBox2"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/checkBox"
+        app:layout_constraintVertical_bias="0.391" />
 
     <CheckBox
         android:id="@+id/checkBox4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
         android:text="Sex"
         app:layout_constraintBottom_toBottomOf="@+id/checkBox5"
         app:layout_constraintStart_toEndOf="@+id/checkBox5"
@@ -69,27 +44,53 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <CheckBox
-        android:id="@+id/checkBox5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Qui"
-        app:layout_constraintBottom_toTopOf="@+id/textView9"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.202"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox"
-        app:layout_constraintVertical_bias="0.371" />
-
-    <CheckBox
         android:id="@+id/checkBox7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
         android:text="Sab"
         app:layout_constraintBottom_toBottomOf="@+id/checkBox4"
         app:layout_constraintStart_toEndOf="@+id/checkBox4"
-        app:layout_constraintTop_toTopOf="@+id/checkBox4" />
+        app:layout_constraintTop_toTopOf="@+id/checkBox4"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <CheckBox
+        android:id="@+id/checkBox2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:text="Ter"
+        app:layout_constraintBottom_toBottomOf="@+id/checkBox"
+        app:layout_constraintStart_toEndOf="@+id/checkBox"
+        app:layout_constraintTop_toTopOf="@+id/checkBox"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="Seg"
+        app:layout_constraintBottom_toTopOf="@+id/textView9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.295"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        app:layout_constraintVertical_bias="0.301" />
+
+    <CheckBox
+        android:id="@+id/checkBox3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="Qua"
+        app:layout_constraintBottom_toBottomOf="@+id/checkBox2"
+        app:layout_constraintStart_toEndOf="@+id/checkBox2"
+        app:layout_constraintTop_toTopOf="@+id/checkBox2"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textView9"
@@ -106,13 +107,17 @@
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="323dp"
-        android:layout_height="235dp"
-        android:scrollbars = "vertical"
-        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac massa tempor, vestibulum enim vitae, varius nisl. Curabitur congue diam erat, nec mattis urna egestas vel. Donec bibendum elementum ante quis placerat. Phasellus ac dolor suscipit, malesuada neque non, convallis purus. Nunc mollis non leo id tempus. Mauris at neque eget nulla ullamcorper tempus. Nullam ut mi malesuada velit viverra pharetra et a mi. Morbi semper maximus eros, et sodales augue elementum vitae. Vivamus vitae magna eu arcu interdum condimentum sed sit amet urna. Cras justo lorem, elementum vitae sodales non, finibus non velit. Nulla ut lorem ultricies, elementum purus porttitor, faucibus erat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus vitae enim a sapien mattis semper non sed mi. Phasellus id molestie nisl, vitae consectetur neque.  Cras mollis tincidunt varius. Nam congue, elit at aliquam venenatis, elit massa imperdiet lorem, non dapibus neque lacus vitae augue. Sed eleifend vitae felis non efficitur. Quisque aliquam ligula ac mi mattis bibendum. In porttitor diam non augue consectetur dictum. Aliquam lectus nulla, interdum a ante non, auctor maximus ante. Donec ultrices euismod turpis et faucibus. Donec porta, ligula id tristique gravida, ante leo bibendum tortor, eu porta arcu nunc nec diam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec elementum tincidunt venenatis. Donec at faucibus magna. Aliquam erat volutpat. Sed varius sapien justo, accumsan dictum lectus condimentum sed."
+        android:layout_width="330dp"
+        android:layout_height="221dp"
+        android:scrollbars="vertical"
+        android:background="#d3d3d3"
+        android:layout_marginLeft="30dp"
+        android:text="Carnaval na tijuca"
+        android:textColor="#484747"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
 
@@ -122,6 +127,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="dd/mm - dd/mm"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.484"
@@ -134,7 +140,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="26dp" />
+        app:layout_constraintGuide_end="385dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"
@@ -145,59 +151,63 @@
 
     <TextView
         android:id="@+id/textView14"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginLeft="36dp"
+        android:layout_width="358dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
         android:text="Hora: hh/mm"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.518" />
-
-    <TextView
-        android:id="@+id/textView15"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginLeft="36dp"
-        android:text="Data: dd/mm/aaaa"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.078"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.549" />
-
-    <TextView
-        android:id="@+id/textView16"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginLeft="36dp"
-        android:text="E-mail: ousadiaealegria@inf.ufrgs.br"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.58" />
+        app:layout_constraintVertical_bias="0.504" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="358dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:text="Data: dd/mm/aaaa"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.576" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="358dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:text="E-mail: ousadiaealegria@inf.ufrgs.br"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.542" />
 
     <TextView
         android:id="@+id/textView17"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginLeft="36dp"
+        android:layout_width="358dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
         android:text="Cartão: 00000000"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.053"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.616" />
+        app:layout_constraintVertical_bias="0.611" />
 
     <ImageView
         android:id="@+id/empty_file"
